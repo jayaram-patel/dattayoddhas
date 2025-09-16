@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Rockfall Prediction Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  AI Rockfall Prediction & Alert Dashboard
+</header>
+
+<div class="container">
+  <!-- Cards -->
+  <div class="grid">
+    <div class="card">
+      <h3>Prediction Status</h3>
+      <div id="prediction-status" class="alert">⚠️ High Risk</div>
+    </div>
+    <div class="card">
+      <h3>Weather Data</h3>
+      <p id="rainfall">Rainfall: 120 mm</p>
+      <p id="temperature">Temp: 24°C</p>
+    </div>
+    <div class="card">
+      <h3>Slope Sensors</h3>
+      <p id="slope">Angle: 35°</p>
+      <p id="vibration">Vibration: Normal</p>
+    </div>
+    <div class="card">
+      <h3>Last Update</h3>
+      <p id="last-update">17 Sept 2025, 10:15 AM</p>
+    </div>
+  </div>
+
+  <!-- Chart -->
+  <div class="card">
+    <h3>Rockfall Risk Trend</h3>
+    <canvas id="riskChart"></canvas>
+  </div>
+
+  <!-- Table -->
+  <div style="margin-top:2rem;">
+    <h3 style="margin-bottom:1rem; color:#2c3e50;">Recent Events</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+      <tbody id="events-table">
+        <tr>
+          <td>2025-09-10</td>
+          <td>Raigad, Maharashtra</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>2025-09-05</td>
+          <td>Dehradun, Uttarakhand</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <td>2025-08-30</td>
+          <td>Kozhikode, Kerala</td>
+          <td>Low</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer>
+  Mineguard AI | Team Datayoddhas
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
